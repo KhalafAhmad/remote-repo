@@ -1,4 +1,9 @@
 resource "local_file" "file1"{
-filename = "file1.txt"
-content = "this file created by terraform"
+filename = local.fileName
+content = local.cont
+}
+
+locals {
+fileName = "file1.txt"
+cont = "hello world "
 }
